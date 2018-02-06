@@ -1,0 +1,56 @@
+<!-- public/views/index.html -->
+<!doctype html>
+<html ng-app="app">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <base href="/">
+        <title>MEAN(Y) Application</title>
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <!-- Animate.CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+        <!-- FontAwesome -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <!-- JS: Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <!-- JS: Angular -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
+        <!-- Angular: App -->
+        <script src="/javascripts/app.js"></script>
+        <!-- Angular: Routes -->
+        <script src="/javascripts/routes.js"></script>
+        <!-- Angular: Controllers -->
+        <script src="/javascripts/controllers/MainController.js"></script>
+        <script src="/javascripts/controllers/LoginController.js"></script>
+        
+    </head>
+    <body ng-controller="MainController">
+        <div class="container">
+            <!-- HEADER -->
+            <nav class="navbar navbar-expand-md navbar-light fixed-top">
+                <a class="navbar-brand" href="#">Sample App</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li><a href="/login">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Dynamic Angular Content -->
+            <div ng-view></div>
+        </div>
+    </body>
+</html>
