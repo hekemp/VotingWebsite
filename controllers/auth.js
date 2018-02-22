@@ -7,7 +7,7 @@ module.exports.loginShow = function(req, res) {
 
 module.exports.login = function(req, res) {
     passport.authenticate('local')(req, res, function() {
-        res.redirect('/');
+        res.redirect('/mainpage');
     });
 }
 
