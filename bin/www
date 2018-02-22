@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('mean-tutorial:server');
+var debug = require('debug')('newbranch:server');
 var http = require('http');
 
 /**
