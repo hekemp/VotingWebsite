@@ -22,7 +22,7 @@ module.exports.login = function(req, res) {
 
 module.exports.requestShow = function(req,res)
 {
-  res.render('request');
+  res.redirect('/request');
 }
 
 module.exports.mainShow = function(req,res)
