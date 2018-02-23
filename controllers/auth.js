@@ -20,7 +20,8 @@ module.exports.register = function(req, res) {
         if(err) return res.render('register', { account: account }); // want to pass back error, or err object itself
 
         passport.authenticate('local')(req, res, function() {
-            res.redirect('/');
+          console.log('1111')
+          res.redirect('/login');
         });
     });
 }

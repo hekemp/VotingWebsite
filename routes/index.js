@@ -14,8 +14,8 @@ var authController = require('../controllers/auth');
 
 router.get('/', indexController.homepage);// When we get a request for a /, so whatever indexController says to do for it
 
-//router.get('/mainpage', indexController.mainShow());
-//router.get('/request' , indexController.requestShow());
+router.get('/mainpage', indexController.mainShow);
+router.get('/request' , indexController.requestShow);
 
 router.get('/login', authController.loginShow);
 router.get('/register', authController.registerShow);
@@ -26,12 +26,12 @@ router.get('/register', authController.registerShow);
 
 
 
-
+//router.post('/loginButton', indexController.login);
+router.post('/registerButton', indexController.registerRedirect);
 router.post('/login', authController.login);
 router.post('/register', authController.register);
-//router.post('/mainPage', indexController.requestShow());
-//router.post('/loginButton', indexController.login);
-//router.post('/registeButton', indexController.registerRedirect());
+router.post('/mainpage', indexController.requestShow);
+
 
 router.get('/logout', authController.logout);
 
