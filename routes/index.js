@@ -31,6 +31,7 @@ router.post('/registerButton', indexController.registerRedirect);
 router.post('/login', authController.login);
 router.post('/register', authController.register);
 router.post('/mainpage', indexController.requestShow);
+router.post('/request', indexController.mainShow);
 
 
 router.get('/logout', authController.logout);
