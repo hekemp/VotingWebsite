@@ -21,7 +21,7 @@ module.exports.register = function(req, res) {
 
         passport.authenticate('local')(req, res, function() {
           console.log('1111')
-          res.redirect('/');
+          res.redirect('/login');
         });
     });
     res.redirect('/login') //I should let redirect within authenticate? I am not sure.
