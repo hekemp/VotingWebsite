@@ -141,7 +141,7 @@ module.exports.authorize = function(req, res) {
 
       console.log(authKeySet.user);
       User.findById( authKeySet.user, function(err, authUser){
-        if (err) {return res.render('auth', {error: err});} //"We couldn't find that authorization key. Please verify you entered the right one."
+        if (err) {return res.render('auth', {error: err});}
 
         authUser.emailAuthorized = true;
 
