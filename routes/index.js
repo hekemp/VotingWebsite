@@ -7,6 +7,7 @@ var router = express.Router();
 
 var indexController = require('../controllers/index');
 var authController = require('../controllers/auth');
+var requestController = require('../controllers/request')
 // Default route, our index page, essentially.
 // This renders out 'index' which is index.ejs, and passes in the title, Express.
 /* GET home page. */
@@ -18,5 +19,9 @@ router.post('/login', authController.login);
 router.post('/register', authController.register);
 
 router.get('/logout', authController.logout);
+
+router.get('/auth/:auth', authController.authorize);
+
+router.post('/request', requestController.requestAccess);
 
 module.exports = router;
