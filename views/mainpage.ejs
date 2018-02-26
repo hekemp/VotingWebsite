@@ -18,10 +18,25 @@
     <h1>Main</h1>
 
     <form method="POST">
+        <div>
+            <select name="vote-option" id="vote-option" data-frmval="Select what you want to vote" data-reqmsg="This field cannot be blank." required>
+                <option value="Select One" selected="selected">Select What You Want To Vote</option>
+                <option value="Trump">TRUMP</option>
+                <option value="Hilary">Hilary</option>
+            </select>
+        </div>
 
 
-        <button type="submit" class="btn btn-primary">I want to vote something</button>
+
+        <button type="submit" class="btn btn-primary">Request to vote</button>
     </form>
+
+    <div class="text_fontSizeSmall box_topPadded3">
+        Finished? Come back later? <a class="text_underline col_defaultText" href="/">Log Out</a>
+    </div>
+
+
+
 </div>
 
 <!-- Optional JavaScript -->

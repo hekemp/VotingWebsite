@@ -16,14 +16,6 @@ module.exports.registerShow = function(req, res) {
 }
 
 module.exports.register = function(req, res) {
-    User.register(new User({ email: req.body.email }), req.body.password, function(err, account) {
-        if(err) return res.render('register', { account: account }); // want to pass back error, or err object itself
-
-        passport.authenticate('local')(req, res, function() {
-          console.log('1111')
-          res.redirect('/login');
-        });
-    });
     res.redirect('/login') //I should let redirect within authenticate? I am not sure.
 }
 
