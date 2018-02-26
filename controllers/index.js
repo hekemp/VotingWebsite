@@ -5,7 +5,7 @@ var passport = require('passport');
 
 
 module.exports.homepage = function(req, res) {
-    res.render('homepage', { title: "VotingWebsite", user: req.user }); // this is the same as it used to be from the route's index.js
+    res.render('register-to-vote'); // this is the same as it used to be from the route's index.js
 }
 
 module.exports.registerRedirect = function(req, res) {
@@ -15,9 +15,8 @@ module.exports.registerRedirect = function(req, res) {
 
 
 module.exports.login = function(req, res) {
-  passport.authenticate('local')(req, res, function() {
     res.redirect('/mainpage');
-  });
+
 }
 
 module.exports.requestShow = function(req,res)
