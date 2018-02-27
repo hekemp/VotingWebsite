@@ -15,7 +15,7 @@ router.get('/login', authController.loginShow);
 router.get('/register', authController.registerShow);
 router.get('/request', authController.request);
 
-
+router.post('/homepage', authController.loginShow);
 router.post('/login', authController.login);
 router.post('/register', authController.register);
 router.post('/request', authController.request);
